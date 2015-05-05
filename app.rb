@@ -32,3 +32,8 @@ post('/success') do
   @task.save()
   erb(:success)
 end
+
+get('/:id') do
+  @list = List.find(params.fetch("id").to_i())
+  erb(:list)
+end

@@ -1,0 +1,15 @@
+<h1><%= list.name() %></h1>
+
+<h3>Here are all the things you need to do:</h3>
+
+<h3><% if @tasks.any? %>
+      <% @list.tasks().each() do |task| %>
+        <p><%= task.description() %> Due: <%= task.due_date() %> [<a href="/delete_task/<%= task.id()%>">X</a>]</p>
+        <% end %>
+      <% else %>
+        <h3>You have nothing on this list.</h3>
+      <% end %>
+
+<div class="container">
+  <a href="/"><button class="btn">Home</a>
+</div>
