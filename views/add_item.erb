@@ -1,0 +1,18 @@
+<h1>Success!</h1>
+
+<h1>Add an item to the list: <%= @list.name() %></h1>
+
+<form action="/success" method="post">
+  <input type="hidden" name="list_id" class="form-control" value= <%= @list.id() %> >
+  <div class="form-group">
+    <label for="description">Describe your task here</label>
+    <input id="description" name="description" class="form-control" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="due_date">Enter the due date for your task here</label>
+    <input id="due_date" name="due_date" class="form-control" type="date">
+  <div class="form-group">
+    <button type="submit" class="btn-success">Submit</button>
+  </div>
+</form>

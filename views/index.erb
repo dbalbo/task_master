@@ -1,0 +1,18 @@
+<h1>Manage your tasks with Task Master.</h1>
+<h3>A simple tool to manage all your daily tasks</h3>
+
+<h3>Here are your current lists:</h3>
+  <ul>
+   <% if @lists.any? %>
+     <% @lists.each() do |list| %>
+       <li><a href="/<%= list.id() %>"><%= list.name() %></a></li>
+     <% end %>
+
+   <% else %>
+     <h3>You don't have any lists yet.</h3>
+   <% end %>
+  </ul>
+
+<div class="container">
+  <a href="/list">Make a new list</a>
+</div>
